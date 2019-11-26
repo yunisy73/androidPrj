@@ -2,7 +2,9 @@ package com.example.helloworldjni;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,5 +27,9 @@ public class MainActivity extends AppCompatActivity {
 
         int sum = getSum(num1, num2);
         txt_result.setText("JNI Sample :: 합계 : " + sum);
+    }
+    public  void mOnClick(View v) {
+        Intent intent = new Intent(this, SubActivity.class);
+        startActivity(intent);
     }
 }
